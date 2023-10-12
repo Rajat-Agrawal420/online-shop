@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2023 at 07:07 PM
+-- Generation Time: Oct 12, 2023 at 01:01 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -167,7 +167,8 @@ INSERT INTO `cart_items` (`id`, `item_id`, `user_id`, `qty`, `status`, `save_typ
 (9, 2, 5, 1, 1, 'WISHLIST', '2023-08-31 14:39:22'),
 (10, 2, 5, 0, 0, 'CART', '2023-08-31 19:26:06'),
 (11, 24, 5, 1, 0, 'CART', '2023-08-31 22:24:16'),
-(12, 23, 5, 1, 1, 'WISHLIST', '2023-09-01 23:12:54');
+(12, 23, 5, 1, 1, 'WISHLIST', '2023-09-01 23:12:54'),
+(13, 10, 5, 0, 0, 'CART', '2023-09-25 22:43:03');
 
 -- --------------------------------------------------------
 
@@ -302,7 +303,9 @@ INSERT INTO `orders` (`id`, `user_id`, `item_id`, `quantity`, `address`, `amount
 (5, 5, '4,9', '1,1', '26', 13650, '', 0, 49, 'PAID', 'RAZOR-PAY', '2023-08-31 08:53:49', 'PENDING'),
 (6, 5, '6', '1', '26', 402, '', 0, 47, 'PENDING', 'COD', '2023-08-31 14:00:55', 'PENDING'),
 (7, 5, '24', '1', '29', 1375, '', 0, 25, 'PENDING', 'COD', '2023-09-02 07:29:06', 'PENDING'),
-(8, 5, '1', '1', '26', 2360, '', 0, 40, 'PAID', 'RAZOR-PAY', '2023-09-25 16:39:15', 'PENDING');
+(8, 5, '1', '1', '26', 2360, '', 0, 40, 'PAID', 'RAZOR-PAY', '2023-09-25 16:39:15', 'PENDING'),
+(9, 5, '1,10', '1,1', '26', 78360, '', 0, 40, 'PENDING', 'RAZOR-PAY', '2023-09-26 09:27:59', 'PENDING'),
+(10, 5, '1,4', '1,1', '26', 14859, '', 0, 40, 'PAID', 'RAZOR-PAY', '2023-09-26 09:28:57', 'PENDING');
 
 -- --------------------------------------------------------
 
@@ -336,7 +339,11 @@ INSERT INTO `order_detail` (`id`, `user_id`, `order_id`, `item_id`, `quantity`, 
 (6, 5, 5, 9, 1, 1177, 23, 0, 0, '2023-08-31 14:23:49'),
 (7, 5, 6, 6, 1, 402, 47, 0, 0, '2023-08-31 19:30:55'),
 (8, 5, 7, 24, 1, 1375, 25, 0, 0, '2023-09-02 12:59:06'),
-(9, 5, 8, 1, 1, 2360, 40, 0, 0, '2023-09-25 22:09:15');
+(9, 5, 8, 1, 1, 2360, 40, 0, 0, '2023-09-25 22:09:15'),
+(10, 5, 9, 1, 1, 2360, 40, 0, 0, '2023-09-26 14:57:59'),
+(11, 5, 9, 10, 1, 76000, 0, 0, 0, '2023-09-26 14:57:59'),
+(12, 5, 10, 1, 1, 2360, 40, 0, 0, '2023-09-26 14:58:57'),
+(13, 5, 10, 4, 1, 12499, 0, 0, 0, '2023-09-26 14:58:57');
 
 -- --------------------------------------------------------
 
@@ -369,22 +376,22 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `Category`, `sub_cat`, `brand`, `product_name`, `price`, `size`, `color`, `material`, `availability`, `discount`, `pic`, `description`, `status`, `label`, `views`, `created_date`) VALUES
-(1, 'fashion', '', 'Pantaloons', 'Pantaloons Men Solid sporty black jacket', 2400, 'LG', 'Yellow', 'solid', 'In Stock', '40', '/img/product1.jpg', 'this jacket is more comfortable in winter seasons. similar products are aval', 1, 1, 584, '2023-08-15 16:46:14'),
-(2, 'Electronics', '', 'Dell', 'Dell Inspiron Ryzen 3 3254U(8GB RAM/500GB SSD', 55400, 'L', 'grey', 'metal body', 'In Stock', '0', '/img/product2.jpg', 'this is best laptop under 5k,it comes with 2gb dedicated graphics card. soud quality is high and 4.5GH processor speed ,', 1, 0, 8, '2023-08-15 19:46:14'),
-(3, 'fashion', '', 'Cobb', 'Cobb Kids face Mask with MultiColours ', 435, 'M', 'Multi-Colours', 'solid', 'In Stock', '35', '/img/product3.jpg', 'it is face mask to protect from viruses and polluted air.it made with cotton cloth and easy to fit on face.', 1, 2, 125, '2023-08-15 15:46:14'),
+(1, 'fashion', '', 'Pantaloons', 'Pantaloons Men Solid sporty black jacket', 2400, 'LG', 'Yellow', 'solid', 'In Stock', '40', '/img/product1.jpg', 'this jacket is more comfortable in winter seasons. similar products are aval', 1, 1, 589, '2023-08-15 16:46:14'),
+(2, 'Electronics', '', 'Dell', 'Dell Inspiron Ryzen 3 3254U(8GB RAM/500GB SSD', 55400, 'L', 'grey', 'metal body', 'In Stock', '0', '/img/product2.jpg', 'this is best laptop under 5k,it comes with 2gb dedicated graphics card. soud quality is high and 4.5GH processor speed ,', 1, 0, 12, '2023-08-15 19:46:14'),
+(3, 'fashion', '', 'Cobb', 'Cobb Kids face Mask with MultiColours ', 435, 'M', 'Multi-Colours', 'solid', 'In Stock', '35', '/img/product3.jpg', 'it is face mask to protect from viruses and polluted air.it made with cotton cloth and easy to fit on face.', 1, 2, 127, '2023-08-15 15:46:14'),
 (4, 'Electronics', '', 'Oppo Realme', 'realme Nazro 50A(Oxygen Blue, 128 GB) 4 GB RA', 12499, 'XL', 'Oxygen Blue', 'metal body', 'In Stock', '0', '/img/product4.jpg', 'this phone battery is 4600 mah powerfully backup and fast charging supported.', 1, 0, 2, '2023-08-15 15:46:14'),
-(6, 'Electronics', '', 'Boat', 'Boat 100 Wired Headset(Red,In the Ear)', 449, '', 'red', 'solid', 'In Stock', '47', '/img/product5.jpg', 'It is best ear phone of boat because it provide best sound quality.', 1, 1, 25, '2023-08-15 15:46:14'),
-(8, 'Electronics', '', 'HP', 'HP Pavallion NoteBook(4GB RAM/300GBSSD)', 35000, 'XL', 'Silver Mattle', 'solid', 'In Stock', '0', '/img/product6.jpg', 'Hp Pavallion is the perfect for students and home workers. it is super fast multi processor laptop.', 1, 1, 62, '2023-08-15 15:46:14'),
-(9, 'fashion', '', 'Apollo', 'Apollo Men T-Shirt Green', 1200, 'LG', 'green', 'cotton', 'In Stock', '0', '/img/product7.jpg', 'best t-shirt under 1k.', 1, 2, 1, '2023-08-15 15:46:14'),
+(6, 'Electronics', '', 'Oppo', 'Realme nazro 10(Red,In the Ear)', 449, '', 'red', 'solid', 'In Stock', '47', '/img/product8.jpg', 'It is best ear phone of boat because it provide best sound quality.', 1, 1, 31, '2023-08-15 15:46:14'),
+(8, 'Electronics', '', 'HP', 'HP Pavallion NoteBook(4GB RAM/300GBSSD)', 35000, 'XL', 'Silver Mattle', 'solid', 'In Stock', '0', '/img/product6.jpg', 'Hp Pavallion is the perfect for students and home workers. it is super fast multi processor laptop.', 1, 1, 64, '2023-08-15 15:46:14'),
+(9, 'fashion', '', 'Apollo', 'Apollo Men T-Shirt Green', 1200, 'LG', 'green', 'cotton', 'In Stock', '0', '/img/product7.jpg', 'best t-shirt under 1k.', 1, 2, 10, '2023-08-15 15:46:14'),
 (10, 'Electronics', '', 'Apple', 'Apple i Phone x', 76000, 'L', 'blue', 'metal blue', 'In Stock', '0', '/img/product8.jpg', 'Best i phone under 80k in deals.', 1, 0, 0, '2023-08-15 15:46:14'),
-(12, 'fashion', '', 'Rayban', 'Rayban Men Sun Glasses', 450, 'S', 'Sky blue', 'plastic', 'In Stock', '46', '/img/product8.jpg', 'best sunglasses of rayban under 500 rs.', 1, 1, 24, '2023-08-15 15:46:14'),
+(12, 'fashion', '', 'Rayban', 'Rayban Men Sun Glasses', 450, 'S', 'Sky blue', 'plastic', 'In Stock', '46', '/img/product14.jpg', 'best sunglasses of rayban under 500 rs.', 1, 1, 24, '2023-08-15 15:46:14'),
 (14, 'Electronics', '', 'Sonata', 'Men Watches Combo Pack of 2', 1500, 'L', 'black', '', 'In Stock', '0', '/img/product9.jpg', ' trending watches from mi. colour is black and blue.', 1, 0, 1, '2023-08-15 15:46:14'),
-(15, 'Electronics', '', 'Fast Track', 'Fast track Men Sports Watch Analog ', 1400, '', 'White', '', 'In Stock', '45', '/img/product10.jpg', 'best quality watches from fast track. colour is green.', 1, 2, 0, '2023-08-15 15:46:14'),
+(15, 'Electronics', '', 'Fast Track', 'Fast track Men Sports Watch Analog ', 1400, '', 'White', '', 'In Stock', '45', '/img/product10.jpg', 'best quality watches from fast track. colour is green.', 1, 2, 11, '2023-08-15 15:46:14'),
 (18, 'Electronics', '', 'Dell', 'Dell Wireless Keyboard & Mouse', 1200, '', 'Black', '', 'In Stock', '22', '/img/product11.jpg', 'Dell Wireless Keyboard & Mouse comes with 1 year Warrunty and replacement.', 1, 0, 0, '2023-08-15 15:46:14'),
-(19, 'Electronics', '', 'HP ', 'HP Victus gaming laptop', 60000, '', 'Mattle Grey', '', 'In Stock', '40', '/img/product12.jpg', 'Best gaming laptop and color black or mattel body 500gb ssd ram is 16gb', 1, 1, 2, '2023-08-15 15:46:14'),
-(20, 'Beauty & makeup', '', 'Himalaya', 'Himalaya Neem Face Wash 400ml', 270, '', 'Green Gel', '', 'In Stock', '25', '/img/product13.jpg', 'Himalaya Neem face wash for purifying skin, bright skin. Ayurvedic Medicine for Pimples.', 1, 2, 0, '2023-08-15 15:46:14'),
-(23, 'fashion', '', 'Red Cheif', 'Red Chief Men Shoes Brown', 2400, '', 'Blue', '', 'In Stock', '0', '/img/category7.jpg', 'Pure 100% leather shoes by Red Chief. it provides better quality of leather.', 1, 1, 43, '2023-08-15 15:46:14'),
-(24, 'Gadgets', '', 'Logitech', 'mouse', 1400, '', 'color', '', 'In Stock', '25', '/img/product14.jpg', 'best quality ', 1, 0, 88, '2023-08-15 15:46:14');
+(19, 'Electronics', '', 'HP ', 'HP Laptop', 60000, '', 'Mattle Grey', '', 'In Stock', '40', '/img/product12.jpg', 'Best gaming laptop and color black or mattel body 500gb ssd ram is 16gb', 1, 1, 4, '2023-08-15 15:46:14'),
+(20, 'Beauty & makeup', '', 'Himalaya', 'Himalaya Neem Face Wash 400ml', 270, '', 'Green Gel', '', 'In Stock', '25', '/img/product13.jpg', 'Himalaya Neem face wash for purifying skin, bright skin. Ayurvedic Medicine for Pimples.', 1, 2, 3, '2023-08-15 15:46:14'),
+(23, 'fashion', '', 'Red Cheif', 'Red Chief Men Shoes Brown', 2400, '', 'Blue', '', 'In Stock', '0', '/img/category7.jpg', 'Pure 100% leather shoes by Red Chief. it provides better quality of leather.', 1, 1, 45, '2023-08-15 15:46:14'),
+(24, 'Gadgets', '', 'Boat', 'Boat Head Phones', 1400, '', 'color', '', 'In Stock', '25', '/img/product15.jpg', 'best quality ', 1, 0, 89, '2023-08-15 15:46:14');
 
 -- --------------------------------------------------------
 
@@ -591,7 +598,7 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart_items`
 --
 ALTER TABLE `cart_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -615,13 +622,13 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `product`
